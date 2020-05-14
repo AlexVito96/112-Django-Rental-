@@ -3,10 +3,13 @@ from django.db import models
 # Create your models here.
 # ORM objects (Object Relation Mapping)
 
-class Genre(models.model):
+class Genre(models.Model):
     name = models.CharField(max_length = 255)
 
-class Movie(models.model):
+    def __str__(self):
+        return self.name
+
+class Movie(models.Model):
     title = models.CharField(max_length = 255)
     release_year = models.IntegerField()
     in_stock = models.IntegerField()
@@ -14,3 +17,5 @@ class Movie(models.model):
     image = models.CharField(max_length = 500)
     genre = models.ForeignKey(Genre, on_delete = models.CASCADE)
 
+    def __str__(self):
+        return self.title + " | " + str(self.release_year) + " | " + str(self.price)
