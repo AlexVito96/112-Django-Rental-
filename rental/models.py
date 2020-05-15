@@ -3,6 +3,12 @@ from django.db import models
 # Create your models here.
 # ORM objects (Object Relation Mapping)
 
+# python manage.py makemigrations
+# python manage.py migrate
+
+# Admin
+# python manage.py createsuperuser
+
 class Genre(models.Model):
     name = models.CharField(max_length = 255)
 

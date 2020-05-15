@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% block styles %}
+<link href="/static/styles/details.css" rel="stylesheet">
+{% endblock %}
+
+<h2>{{movie.title }}</h2>
+
+<div class="image">
+    <img src="{{ movie.image }}">
+</div>
+
+<div class="details">
+    Release Year: {{movie.release_year }}
+    ...
+</div>
+
+<br>
+
+<div class="actions">
+    <button class="btn btn-sm btn-info">Add to cart</button>
+    <button class="btn btn-sm btn-danger">Watch on Netflix</button>
+    <button class="btn btn-sm btn-success">Watch on Hulu</button>
+    <button class="btn btn-sm btn-light">Watch on iTunes</button>
+</div>
+
+
+<div class="synopsis">
+    <h6>Synopsis</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias consectetur blanditiis error quam aliquid
+        voluptatem adipisci eligendi, quidem, vero obcaecati est. Quos iusto vitae voluptas adipisci excepturi, modi
+        exercitationem?
+    </p>
+</div>
+
+{% endblock %}
+
+
+<!-- CR -->
+<!-- Add a menu -->
+<!-- Fix details page -->
+<!-- Fix catalog page -->
