@@ -22,7 +22,7 @@ def catalog(request):
 
 # about send your name
 def about(request):
-    return HttpResponse("Alex Vito")
+    return render(request, 'about.html')
 
 def soon(request):
    return render(request, 'comingSoon.html')

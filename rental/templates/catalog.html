@@ -2,7 +2,13 @@
 
 {% block content %}
 
-<h2>The Movies catalog (dynamic)</h2>
+{% block styles %}
+
+<link href="/static/styles/catalog.css" rel="stylesheet">
+
+{% endblock %}
+
+<h2 class="head">The Movies catalog (dynamic)</h2>
 
 <div class="catalog">
     <table class="table table-bordered table-striped">

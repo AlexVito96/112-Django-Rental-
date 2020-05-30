@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -7,24 +8,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vidly project</title>
     <!--Styles-->
+    {% block styles %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <link href="{% static 'bootstrap/css/bootstrap-theme.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/custom.css' %}" rel="stylesheet" media="screen">
     
-    {% block styles %}
 
     {% endblock %}
+    <link href="/static/styles/layout.css" rel="stylesheet">
 
 </head>
 
+<header>
+
+<h1>HollyWood Videos</h1>
+
+</header>
+
 <body>
-    
+
     <!-- menu -->
     <nav class="navbar navbar-dark bg-dark">
 
-        <span class="navbar-brand mb-0 h1"><a href="#"></a>
-                Vidly 
+        <span class="navbar-brand mb-0 h3"><a href='home'>Home</a>
+            
+        </span>
+
+        <span class="navbar-brand mb-0 h3"><a href='catalog'>Catalog</a>
+            
+        </span>
+        <span class="navbar-brand mb-0 h3"><a href="about">About</a>
+            
+        </span>
+        <span class="navbar-brand mb-0 h3"><a href="login">User Login</a>
+            
+        </span>
+        <span class="navbar-brand mb-0 h3"><a href="order">Place Order</a>
+            
+        </span>
+        <span class="navbar-brand mb-0 h3"><a href="details">Details</a>
+            
         </span>
         
+
     </nav>
 
     <div class="container">
@@ -55,7 +85,7 @@
 
     {% block scripts %}
 
-    {% endblock %} 
+    {% endblock %}
 
 </body>
 
